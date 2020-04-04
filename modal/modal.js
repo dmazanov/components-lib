@@ -1,9 +1,14 @@
+'use strict';
+
+var ESC_KEYCODE = 27;
+var ENTER_KEYCODE = 13;
+
 var modal = document.querySelector('.modal');
 var modalOpenButton = document.querySelector('.modal-open');
 var modalCloseButton = modal.querySelector('.modal-close');
 
 var onmodalEscPress = function(evt) {
-    if (evt.keyCode === 27) {
+    if (evt.keyCode === ESC_KEYCODE) {
         closemodal();
     }
 };
@@ -24,7 +29,7 @@ modalOpenButton.addEventListener('click', function(){
 
 modalOpenButton.addEventListener('keydown', function(evt) {
     // Open modal on Enter
-    if (evt.keyCode === 13) {
+    if (evt.keyCode === ENTER_KEYCODE) {
         openmodal();
     }
 });
@@ -35,7 +40,7 @@ modalCloseButton.addEventListener('click', function(){
 
 modalCloseButton.addEventListener('keydown', function(evt) {
     //close modal when click on Enter
-    if (evt.keyCode === 13) {
+    if (evt.keyCode === ENTER_KEYCODE) {
         closemodal();
     }
 });
